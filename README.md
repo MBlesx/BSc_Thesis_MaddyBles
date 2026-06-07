@@ -1,5 +1,3 @@
-# BSc_Thesis_MaddyBles
-
 # Thesis Experiment Survey Analysis
 
 Analysis script for my thesis investigating how emotional tone and situation 
