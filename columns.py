@@ -1,12 +1,8 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Created on Fri Jun  5 15:06:12 2026
-
-@author: maddyxbles
+Column definitions for easy thesis experiment survey analysis.
+Maps survey column names to grouped lists by condition, outcome 
+measure, and demographics.
 """
-
-# listst of columns 
 
 # Lists of different columns 
 # Appropriation + credibility answers 
