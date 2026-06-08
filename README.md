@@ -1,6 +1,6 @@
 # Thesis Experiment Survey Analysis
 
-Analysis script for my thesis investigating how emotional tone and situation 
+Analysis script for my thesis investigating how emotional expression and situation 
 severity affect perceived social appropriateness and perceived credibility of 
 digital healthcare assistant responses.
 
