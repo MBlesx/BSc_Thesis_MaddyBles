@@ -23,5 +23,8 @@ pip install -r requirements.txt
 - Repeated Measures ANOVA (emotion x severity)
 - Mixed Linear Models with demographic covariates and baseline mood
 
+## License 
+MIT license is used. See [LICENSE](https://github.com/MBlesx/BSc_Thesis_MaddyBles/blob/main/LICENSE) for details. 
+
 ## Note
 Raw data is not included in this repository.
