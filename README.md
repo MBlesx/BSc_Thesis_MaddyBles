@@ -19,7 +19,7 @@ Install liberaries mentioned in requirements.txt, using pip install
 3. Results are saved to `results/analysis_results.txt`
 
 ## Analysis
-- Cronbach's alpha for scale reliability
+- Cronbach's alpha for internal consistency of survey questions
 - Repeated Measures ANOVA (emotion x severity)
 - Mixed Linear Models with demographic covariates and baseline mood
 
