@@ -7,7 +7,7 @@ digital healthcare assistant responses.
 ## Files
 - `analysis.py`: main analysis script
 - `columns.py`: column definitions for the survey data
-- `data.xlsx`:
+- `data.xlsx`: anonymised survey dataset used for analysis. The dataset contains participant responses after cleaning, including removal of IP addresses, names, and other identifying data.
 - `results.txt`: results from analysis scrips using `data.xlsx`
 
 ## Requirements
