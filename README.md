@@ -14,10 +14,9 @@ digital healthcare assistant responses.
 Install liberaries mentioned in requirements.txt, using pip install 
 
 ## Usage
-1. Place your survey data file in the `data/` folder
-2. Update the `file_path` variable in `analysis.py` to match your filename
-3. Run `analysis.py`
-4. Results are saved to `results/analysis_results.txt`
+1. Update the `file_path` in `analysis.py` to match your data filename
+2. Run `analysis.py`
+3. Results are saved to `results/analysis_results.txt`
 
 ## Analysis
 - Cronbach's alpha for scale reliability
