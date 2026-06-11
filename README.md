@@ -5,12 +5,13 @@ severity affect perceived social appropriateness and perceived credibility of
 digital healthcare assistant responses.
 
 ## Files
-- `analysis.py` — main analysis script
-- `columns.py` — column definitions for the survey data
+- `analysis.py`: main analysis script
+- `columns.py`: column definitions for the survey data
+- `data.xlsx`:
+- 'results.txt`: results from analysis scrips using `data.xlsx`
 
 ## Requirements
-Install dependencies with:
-pip install -r requirements.txt
+Install liberaries mentioned in requirements.txt, using pip install 
 
 ## Usage
 1. Place your survey data file in the `data/` folder
@@ -26,5 +27,4 @@ pip install -r requirements.txt
 ## License 
 MIT license is used. See [LICENSE](https://github.com/MBlesx/BSc_Thesis_MaddyBles/blob/main/LICENSE) for details. 
 
-## Note
-Raw data is not included in this repository.
+
