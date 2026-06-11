@@ -8,7 +8,7 @@ digital healthcare assistant responses.
 - `analysis.py`: main analysis script
 - `columns.py`: column definitions for the survey data
 - `data.xlsx`:
-- 'results.txt`: results from analysis scrips using `data.xlsx`
+- `results.txt`: results from analysis scrips using `data.xlsx`
 
 ## Requirements
 Install liberaries mentioned in requirements.txt, using pip install 
