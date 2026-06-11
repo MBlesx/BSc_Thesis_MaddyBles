@@ -1,0 +1,219 @@
+CRONBACH'S ALPHA CHECK
+
+Individual Cronbach's alpha: 
+Neutral, Non-Severe - Cred     α = 0.831, 95% CI = [0.734, 0.898]
+Neutral, Non-Severe - App      α = 0.919, 95% CI = [0.873, 0.951]
+Happy, Non-Severe - App        α = 0.928, 95% CI = [0.887, 0.957]
+Happy, Non-Severe - Cred       α = 0.871, 95% CI = [0.797, 0.923]
+ExHappy, Non-Severe - App      α = 0.922, 95% CI = [0.877, 0.953]
+ExHappy, Non-Severe - Cred     α = 0.826, 95% CI = [0.727, 0.896]
+Neutral, Severe - App          α = 0.933, 95% CI = [0.895, 0.960]
+Neutral, Severe - Cred         α = 0.869, 95% CI = [0.794, 0.921]
+Happy, Severe - App            α = 0.954, 95% CI = [0.928, 0.973]
+Happy, Severe - Cred           α = 0.890, 95% CI = [0.828, 0.934]
+ExHappy, Severe - App          α = 0.948, 95% CI = [0.919, 0.969]
+ExHappy, Severe - Cred         α = 0.845, 95% CI = [0.756, 0.907]
+
+Overall Cronbach's alpha: 
+Perceived Social Appropriateness  α = 0.929, 95% CI = [0.896, 0.956]
+Perceived Credibility             α = 0.938, 95% CI = [0.909, 0.961]
+
+===========================================================
+
+   Age  Gender                 Level Education Comf. Tech_1 Used Assistant  \
+0   21    Male               Bachelor's degree            4             No   
+1   21  Female               Bachelor's degree            5             No   
+2   22    Male               Bachelor's degree            4       Not sure   
+3   23    Male               Bachelor's degree            4       Not sure   
+4   17    Male  High school / secondary school            5             No   
+5   21  Female               Bachelor's degree            5             No   
+6   21    Male               Bachelor's degree            5             No   
+7   20  Female               Bachelor's degree            4       Not sure   
+8   20    Male  High school / secondary school            4       Not sure   
+9   21  Female               Bachelor's degree            5             No   
+10  21    Male               Bachelor's degree            4             No   
+11  21    Male               Bachelor's degree            5             No   
+12  21  Female               Bachelor's degree            4       Not sure   
+13  22  Female  High school / secondary school            4       Not sure   
+14  22    Male               Bachelor's degree            4             No   
+15  21  Female               Bachelor's degree            5             No   
+16  23  Female               Bachelor's degree            5       Not sure   
+17  20  Female               Bachelor's degree            4             No   
+18  20  Female               Bachelor's degree            4             No   
+19  20  Female               Bachelor's degree            4             No   
+20  22    Male               Bachelor's degree            4             No   
+21  20    Male               Bachelor's degree            5             No   
+22  21  Female               Bachelor's degree            5             No   
+23  20    Male               Bachelor's degree            5       Not sure   
+24  20  Female               Bachelor's degree            4       Not sure   
+25  21  Female               Bachelor's degree            5             No   
+26  21  Female               Bachelor's degree            5             No   
+27  20    Male               Bachelor's degree            5             No   
+28  22    Male               Bachelor's degree            3       Not sure   
+29  22  Female               Bachelor's degree            4             No   
+30  18  Female  High school / secondary school            4             No   
+31  22    Male  High school / secondary school            3            Yes   
+32  20  Female               Bachelor's degree            5             No   
+33  25    Male  High school / secondary school            4       Not sure   
+34  22  Female               Bachelor's degree            4            Yes   
+35  19  Female               Bachelor's degree            4             No   
+36  22    Male               Bachelor's degree            5             No   
+37  21  Female               Bachelor's degree            4             No   
+38  23  Female               Bachelor's degree            5       Not sure   
+39  23    Male               Bachelor's degree            4             No   
+40  24  Female               Bachelor's degree            5            Yes   
+41  21    Male  High school / secondary school            4            Yes   
+42  21    Male  High school / secondary school            4             No   
+43  21    Male               Bachelor's degree            4            Yes   
+44  22    Male               Bachelor's degree            4             No   
+45  24    Male               Bachelor's degree            5       Not sure   
+
+   Familiarity_1  
+0              2  
+1              4  
+2              0  
+3              4  
+4              5  
+5              5  
+6              3  
+7              3  
+8              2  
+9              3  
+10             3  
+11             3  
+12             2  
+13             2  
+14             3  
+15             3  
+16             5  
+17             3  
+18             3  
+19             4  
+20             3  
+21             4  
+22             3  
+23             3  
+24             4  
+25             3  
+26             0  
+27             4  
+28             0  
+29             1  
+30             3  
+31             3  
+32             4  
+33             5  
+34             3  
+35             4  
+36             4  
+37             5  
+38             2  
+39             1  
+40             4  
+41             4  
+42             3  
+43             4  
+44             2  
+45             4  
+
+
+**************** PERCEIVED SOCIAL APPROPRIATENESS ANALYSIS ****************
+
+ Repeated Measures ANOVA
+               Source  ddof1  ddof2          F     p_GG_corr       ng2
+0             Emotion      2     90  66.553857  8.746699e-18  0.301794
+1            Severity      1     45   3.622996  6.339411e-02  0.008501
+2  Emotion * Severity      2     90   1.539782  2.212572e-01  0.005118
+                        Mixed Linear Model Regression Results
+======================================================================================
+Model:                     MixedLM         Dependent Variable:         Appropriateness
+No. Observations:          276             Method:                     REML           
+No. Groups:                46              Scale:                      0.6190         
+Min. group size:           6               Log-Likelihood:             -347.4813      
+Max. group size:           6               Converged:                  Yes            
+Mean group size:           6.0                                                        
+--------------------------------------------------------------------------------------
+                                            Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------------------------------
+Intercept                                    4.584    1.143  4.012 0.000  2.345  6.824
+Emotion[T.Happy]                             1.168    0.164  7.123 0.000  0.847  1.490
+Emotion[T.Neutral]                           1.375    0.164  8.381 0.000  1.053  1.697
+Severity[T.Severe]                          -0.212    0.164 -1.292 0.196 -0.533  0.110
+Age[T.18]                                   -2.864    1.153 -2.483 0.013 -5.125 -0.603
+Age[T.19]                                   -2.078    1.091 -1.903 0.057 -4.217  0.062
+Age[T.20]                                   -2.741    0.876 -3.129 0.002 -4.457 -1.024
+Age[T.21]                                   -2.282    0.810 -2.815 0.005 -3.870 -0.693
+Age[T.22]                                   -2.319    0.845 -2.745 0.006 -3.975 -0.663
+Age[T.23]                                   -2.652    0.859 -3.086 0.002 -4.336 -0.967
+Age[T.24]                                   -1.569    0.990 -1.585 0.113 -3.508  0.371
+Age[T.25]                                   -1.814    0.996 -1.821 0.069 -3.766  0.138
+Gender[T.Male]                               0.067    0.210  0.320 0.749 -0.344  0.478
+Education[T.High school / secondary school] -0.032    0.337 -0.094 0.925 -0.693  0.629
+TechComfort[T.4]                             0.808    0.547  1.479 0.139 -0.263  1.879
+TechComfort[T.5]                             0.547    0.589  0.929 0.353 -0.607  1.701
+Familiarity[T.1]                            -0.241    0.596 -0.405 0.686 -1.410  0.928
+Familiarity[T.2]                            -0.671    0.514 -1.306 0.192 -1.678  0.336
+Familiarity[T.3]                            -0.633    0.433 -1.463 0.144 -1.481  0.215
+Familiarity[T.4]                            -0.607    0.436 -1.391 0.164 -1.462  0.248
+Familiarity[T.5]                            -1.292    0.548 -2.355 0.019 -2.367 -0.217
+BaselineMood[T.Cheerful]                     0.286    0.381  0.751 0.453 -0.461  1.033
+BaselineMood[T.Excited]                      0.377    0.470  0.801 0.423 -0.545  1.299
+BaselineMood[T.Neutral]                      0.199    0.282  0.707 0.480 -0.353  0.752
+BaselineMood[T.Relaxed]                      0.836    0.432  1.933 0.053 -0.012  1.683
+BaselineMood[T.Tense]                        0.284    0.335  0.848 0.396 -0.373  0.941
+Emotion[T.Happy]:Severity[T.Severe]         -0.114    0.232 -0.492 0.623 -0.569  0.341
+Emotion[T.Neutral]:Severity[T.Severe]        0.217    0.232  0.937 0.349 -0.237  0.672
+Group Var                                    0.219    0.127                           
+======================================================================================
+
+
+
+********************* PERCEIVED CREDIBILITY ANALYSIS *********************
+
+ Repeated Measures ANOVA
+               Source  ddof1  ddof2          F     p_GG_corr       ng2
+0             Emotion      2     90  37.902288  1.467982e-11  0.151368
+1            Severity      1     45   0.448858  5.063014e-01  0.000841
+2  Emotion * Severity      2     90   0.257393  7.456573e-01  0.000645
+                        Mixed Linear Model Regression Results
+======================================================================================
+Model:                       MixedLM          Dependent Variable:          Credibility
+No. Observations:            276              Method:                      REML       
+No. Groups:                  46               Scale:                       0.3304     
+Min. group size:             6                Log-Likelihood:              -277.7198  
+Max. group size:             6                Converged:                   Yes        
+Mean group size:             6.0                                                      
+--------------------------------------------------------------------------------------
+                                            Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+--------------------------------------------------------------------------------------
+Intercept                                    4.730    1.183  3.997 0.000  2.411  7.049
+Emotion[T.Happy]                             0.712    0.120  5.940 0.000  0.477  0.947
+Emotion[T.Neutral]                           0.717    0.120  5.985 0.000  0.482  0.952
+Severity[T.Severe]                           0.033    0.120  0.272 0.786 -0.202  0.268
+Age[T.18]                                   -2.065    1.197 -1.725 0.085 -4.411  0.281
+Age[T.19]                                   -2.079    1.133 -1.835 0.067 -4.299  0.142
+Age[T.20]                                   -2.316    0.909 -2.548 0.011 -4.098 -0.535
+Age[T.21]                                   -1.661    0.841 -1.975 0.048 -3.310 -0.013
+Age[T.22]                                   -1.925    0.877 -2.196 0.028 -3.644 -0.207
+Age[T.23]                                   -2.641    0.892 -2.961 0.003 -4.389 -0.893
+Age[T.24]                                   -2.501    1.027 -2.435 0.015 -4.514 -0.488
+Age[T.25]                                   -0.751    1.034 -0.726 0.468 -2.776  1.275
+Gender[T.Male]                              -0.164    0.217 -0.752 0.452 -0.590  0.263
+Education[T.High school / secondary school]  0.023    0.350  0.066 0.947 -0.663  0.709
+TechComfort[T.4]                             0.071    0.567  0.125 0.900 -1.041  1.183
+TechComfort[T.5]                             0.323    0.611  0.529 0.597 -0.874  1.521
+Familiarity[T.1]                             0.502    0.619  0.811 0.418 -0.711  1.715
+Familiarity[T.2]                             0.316    0.533  0.593 0.553 -0.729  1.361
+Familiarity[T.3]                             0.073    0.449  0.163 0.870 -0.807  0.954
+Familiarity[T.4]                             0.446    0.453  0.985 0.324 -0.441  1.333
+Familiarity[T.5]                            -0.911    0.569 -1.600 0.110 -2.027  0.205
+BaselineMood[T.Cheerful]                    -0.123    0.396 -0.310 0.756 -0.898  0.653
+BaselineMood[T.Excited]                      0.181    0.488  0.370 0.711 -0.776  1.137
+BaselineMood[T.Neutral]                     -0.127    0.293 -0.432 0.665 -0.700  0.447
+BaselineMood[T.Relaxed]                      0.668    0.449  1.488 0.137 -0.212  1.547
+BaselineMood[T.Tense]                       -0.159    0.348 -0.458 0.647 -0.841  0.522
+Emotion[T.Happy]:Severity[T.Severe]         -0.027    0.170 -0.160 0.873 -0.359  0.305
+Emotion[T.Neutral]:Severity[T.Severe]        0.071    0.170  0.417 0.677 -0.262  0.403
+Group Var                                    0.292    0.187                           
+======================================================================================
+
