@@ -5,21 +5,21 @@ severity affect perceived social appropriateness and perceived credibility of
 digital healthcare assistant responses.
 
 ## Files
-- `analysis.py`: main analysis script
-- `columns.py`: column definitions for the survey data
+- `analysis.py`: main analysis script.
+- `columns.py`: column definitions for the survey data.
 - `data.xlsx`: anonymized survey dataset used for analysis. The dataset contains participant responses after cleaning, including removal of IP addresses, names, and other identifying data.
-- `results.txt`: results from analysis script using `data.xlsx`
-- `pilot_analysis.py`: pilot study analysis script
-- `pilot_data.xlsx`: anonymized survey dataset used for pilot study analysis. The dataset contains participant responses after cleaning (removal of IP addresses)
-- `pilot_results.txt`: results from pilot study analysis script using `pilot_data.xlsx`
+- `results.txt`: results from analysis script using `data.xlsx`.
+- `pilot_analysis.py`: pilot study analysis script.
+- `pilot_data.xlsx`: anonymized survey dataset used for pilot study analysis. The dataset contains participant responses after cleaning (removal of IP addresses).
+- `pilot_results.txt`: results from pilot study analysis script using `pilot_data.xlsx`.
 
 ## Requirements
 Install liberaries mentioned in requirements.txt, using pip install 
 
 ## Usage
-1. Update the `file_path` in `analysis.py` or `pilot_data.xlsx` to match your data filename
-2. Run `analysis.py` or `pilot_data.xlsx`
-3. Results are saved to `results.txt` or `pilot_results.txt`
+1. Update the `file_path` in `analysis.py` or `pilot_data.xlsx` to match your data filename;
+2. Run `analysis.py` or `pilot_data.xlsx`;
+3. Results are saved to `results.txt` or `pilot_results.txt`.
 
 ## Main Analysis
 - Cronbach's alpha for internal consistency of survey questions
