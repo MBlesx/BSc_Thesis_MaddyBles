@@ -1,0 +1,63 @@
+=============================== RESULTS ===============================
+
+NEUTRAL
+Happiness: 1.33
+Energy: 1.75
+
+HAPPY
+Happiness: 2.92
+Energy: 3.0
+
+EXAG
+Happiness: 4.21
+Energy: 4.08
+
+========================== ANOVA, HAPPINESS ==========================
+                 Anova
+========================================
+          F Value  Num DF  Den DF Pr > F
+----------------------------------------
+condition 213.0432 2.0000 22.0000 0.0000
+========================================
+
+
+=========================== ANOVA, ENERGY ===========================
+                 Anova
+=======================================
+          F Value Num DF  Den DF Pr > F
+---------------------------------------
+condition 91.2535 2.0000 22.0000 0.0000
+=======================================
+
+
+=================== MALE vs FEMALE PER CONDITION ===================
+     condition  male_happiness  female_happiness  male_energy  female_energy
+0      neutral        1.166667          1.500000     1.666667       1.833333
+1        happy        2.500000          3.333333     2.583333       3.416667
+2  exag. happy        3.916667          4.500000     3.666667       4.500000
+
+=========================== INTERPRETATION ===========================
+
+Condition: neutral
+Happiness:
+- Male: 1.17 closer to 1 (low)
+- Female: 1.5 closer to 1 (low)
+Energy:
+- Male: 1.67 closer to 1 (low)
+- Female: 1.83 closer to 1 (low)
+
+Condition: happy
+Happiness:
+- Male: 2.5 closer to 3 (medium)
+- Female: 3.33 closer to 3 (medium)
+Energy:
+- Male: 2.58 closer to 3 (medium)
+- Female: 3.42 closer to 3 (medium)
+
+Condition: exag. happy
+Happiness:
+- Male: 3.92 closer to 3 (medium)
+- Female: 4.5 closer to 5 (high)
+Energy:
+- Male: 3.67 closer to 3 (medium)
+- Female: 4.5 closer to 5 (high)
