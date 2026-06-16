@@ -124,47 +124,65 @@ Perceived Credibility             α = 0.938, 95% CI = [0.909, 0.961]
 0             Emotion      2     90  66.553857  8.746699e-18  0.301794
 1            Severity      1     45   3.622996  6.339411e-02  0.008501
 2  Emotion * Severity      2     90   1.539782  2.212572e-01  0.005118
-                        Mixed Linear Model Regression Results
-======================================================================================
-Model:                     MixedLM         Dependent Variable:         Appropriateness
-No. Observations:          276             Method:                     REML           
-No. Groups:                46              Scale:                      0.6190         
-Min. group size:           6               Log-Likelihood:             -347.4813      
-Max. group size:           6               Converged:                  Yes            
-Mean group size:           6.0                                                        
---------------------------------------------------------------------------------------
-                                            Coef.  Std.Err.   z    P>|z| [0.025 0.975]
---------------------------------------------------------------------------------------
-Intercept                                    4.584    1.143  4.012 0.000  2.345  6.824
-Emotion[T.Happy]                             1.168    0.164  7.123 0.000  0.847  1.490
-Emotion[T.Neutral]                           1.375    0.164  8.381 0.000  1.053  1.697
-Severity[T.Severe]                          -0.212    0.164 -1.292 0.196 -0.533  0.110
-Age[T.18]                                   -2.864    1.153 -2.483 0.013 -5.125 -0.603
-Age[T.19]                                   -2.078    1.091 -1.903 0.057 -4.217  0.062
-Age[T.20]                                   -2.741    0.876 -3.129 0.002 -4.457 -1.024
-Age[T.21]                                   -2.282    0.810 -2.815 0.005 -3.870 -0.693
-Age[T.22]                                   -2.319    0.845 -2.745 0.006 -3.975 -0.663
-Age[T.23]                                   -2.652    0.859 -3.086 0.002 -4.336 -0.967
-Age[T.24]                                   -1.569    0.990 -1.585 0.113 -3.508  0.371
-Age[T.25]                                   -1.814    0.996 -1.821 0.069 -3.766  0.138
-Gender[T.Male]                               0.067    0.210  0.320 0.749 -0.344  0.478
-Education[T.High school / secondary school] -0.032    0.337 -0.094 0.925 -0.693  0.629
-TechComfort[T.4]                             0.808    0.547  1.479 0.139 -0.263  1.879
-TechComfort[T.5]                             0.547    0.589  0.929 0.353 -0.607  1.701
-Familiarity[T.1]                            -0.241    0.596 -0.405 0.686 -1.410  0.928
-Familiarity[T.2]                            -0.671    0.514 -1.306 0.192 -1.678  0.336
-Familiarity[T.3]                            -0.633    0.433 -1.463 0.144 -1.481  0.215
-Familiarity[T.4]                            -0.607    0.436 -1.391 0.164 -1.462  0.248
-Familiarity[T.5]                            -1.292    0.548 -2.355 0.019 -2.367 -0.217
-BaselineMood[T.Cheerful]                     0.286    0.381  0.751 0.453 -0.461  1.033
-BaselineMood[T.Excited]                      0.377    0.470  0.801 0.423 -0.545  1.299
-BaselineMood[T.Neutral]                      0.199    0.282  0.707 0.480 -0.353  0.752
-BaselineMood[T.Relaxed]                      0.836    0.432  1.933 0.053 -0.012  1.683
-BaselineMood[T.Tense]                        0.284    0.335  0.848 0.396 -0.373  0.941
-Emotion[T.Happy]:Severity[T.Severe]         -0.114    0.232 -0.492 0.623 -0.569  0.341
-Emotion[T.Neutral]:Severity[T.Severe]        0.217    0.232  0.937 0.349 -0.237  0.672
-Group Var                                    0.219    0.127                           
-======================================================================================
+
+Post-hoc: Emotion (Appropriateness)
+         A               B          T        p_corr
+0  Neutral           Happy   2.561227  4.155904e-02
+1  Neutral  ExtremelyHappy  11.057476  6.098997e-14
+2    Happy  ExtremelyHappy   9.202287  1.973712e-11
+
+
+                            Mixed Linear Model Regression Results
+=============================================================================================
+Model:                        MixedLM           Dependent Variable:           Appropriateness
+No. Observations:             276               Method:                       REML           
+No. Groups:                   46                Scale:                        0.6355         
+Min. group size:              6                 Log-Likelihood:               -346.5682      
+Max. group size:              6                 Converged:                    Yes            
+Mean group size:              6.0                                                            
+---------------------------------------------------------------------------------------------
+                                                   Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+---------------------------------------------------------------------------------------------
+Intercept                                           6.001    1.147  5.231 0.000  3.753  8.250
+Emotion[T.Happy]                                   -0.245    0.243 -1.007 0.314 -0.722  0.232
+Emotion[T.ExtremelyHappy]                          -1.463    0.243 -6.011 0.000 -1.940 -0.986
+Severity[T.Severe]                                  0.005    0.166  0.033 0.974 -0.320  0.331
+BaselineMood[T.Cheerful]                            0.136    0.462  0.295 0.768 -0.769  1.041
+BaselineMood[T.Excited]                             0.466    0.554  0.841 0.400 -0.620  1.552
+BaselineMood[T.Neutral]                             0.202    0.331  0.611 0.542 -0.447  0.852
+BaselineMood[T.Relaxed]                             0.492    0.494  0.994 0.320 -0.477  1.461
+BaselineMood[T.Tense]                               0.297    0.403  0.736 0.461 -0.494  1.088
+Age[T.18]                                          -2.864    1.153 -2.483 0.013 -5.125 -0.603
+Age[T.19]                                          -2.078    1.091 -1.903 0.057 -4.217  0.062
+Age[T.20]                                          -2.741    0.876 -3.129 0.002 -4.457 -1.024
+Age[T.21]                                          -2.282    0.810 -2.815 0.005 -3.870 -0.693
+Age[T.22]                                          -2.319    0.845 -2.745 0.006 -3.975 -0.663
+Age[T.23]                                          -2.652    0.859 -3.086 0.002 -4.336 -0.967
+Age[T.24]                                          -1.569    0.990 -1.585 0.113 -3.508  0.371
+Age[T.25]                                          -1.814    0.996 -1.821 0.069 -3.766  0.138
+Gender[T.Male]                                      0.067    0.210  0.320 0.749 -0.344  0.478
+Education[T.High school / secondary school]        -0.032    0.337 -0.094 0.925 -0.693  0.629
+TechComfort[T.4]                                    0.808    0.547  1.479 0.139 -0.263  1.879
+TechComfort[T.5]                                    0.547    0.589  0.929 0.353 -0.607  1.701
+Familiarity[T.1]                                   -0.241    0.596 -0.405 0.686 -1.410  0.928
+Familiarity[T.2]                                   -0.671    0.514 -1.306 0.192 -1.678  0.336
+Familiarity[T.3]                                   -0.633    0.433 -1.463 0.144 -1.481  0.215
+Familiarity[T.4]                                   -0.607    0.436 -1.391 0.164 -1.462  0.248
+Familiarity[T.5]                                   -1.292    0.548 -2.355 0.019 -2.367 -0.217
+Emotion[T.Happy]:Severity[T.Severe]                -0.332    0.235 -1.410 0.158 -0.792  0.129
+Emotion[T.ExtremelyHappy]:Severity[T.Severe]       -0.217    0.235 -0.925 0.355 -0.678  0.243
+Emotion[T.Happy]:BaselineMood[T.Cheerful]           0.286    0.452  0.632 0.527 -0.600  1.172
+Emotion[T.ExtremelyHappy]:BaselineMood[T.Cheerful]  0.165    0.452  0.365 0.715 -0.721  1.051
+Emotion[T.Happy]:BaselineMood[T.Excited]           -0.381    0.507 -0.751 0.453 -1.375  0.613
+Emotion[T.ExtremelyHappy]:BaselineMood[T.Excited]   0.113    0.507  0.223 0.824 -0.881  1.107
+Emotion[T.Happy]:BaselineMood[T.Neutral]           -0.045    0.301 -0.148 0.882 -0.635  0.546
+Emotion[T.ExtremelyHappy]:BaselineMood[T.Neutral]   0.036    0.301  0.119 0.906 -0.555  0.626
+Emotion[T.Happy]:BaselineMood[T.Relaxed]            0.511    0.415  1.230 0.219 -0.303  1.325
+Emotion[T.ExtremelyHappy]:BaselineMood[T.Relaxed]   0.521    0.415  1.255 0.209 -0.293  1.335
+Emotion[T.Happy]:BaselineMood[T.Tense]             -0.027    0.389 -0.069 0.945 -0.789  0.736
+Emotion[T.ExtremelyHappy]:BaselineMood[T.Tense]    -0.012    0.389 -0.031 0.976 -0.774  0.750
+Group Var                                           0.216    0.125                           
+=============================================================================================
 
 
 
@@ -175,45 +193,63 @@ Group Var                                    0.219    0.127
 0             Emotion      2     90  37.902288  1.467982e-11  0.151368
 1            Severity      1     45   0.448858  5.063014e-01  0.000841
 2  Emotion * Severity      2     90   0.257393  7.456573e-01  0.000645
-                        Mixed Linear Model Regression Results
-======================================================================================
-Model:                       MixedLM          Dependent Variable:          Credibility
-No. Observations:            276              Method:                      REML       
-No. Groups:                  46               Scale:                       0.3304     
-Min. group size:             6                Log-Likelihood:              -277.7198  
-Max. group size:             6                Converged:                   Yes        
-Mean group size:             6.0                                                      
---------------------------------------------------------------------------------------
-                                            Coef.  Std.Err.   z    P>|z| [0.025 0.975]
---------------------------------------------------------------------------------------
-Intercept                                    4.730    1.183  3.997 0.000  2.411  7.049
-Emotion[T.Happy]                             0.712    0.120  5.940 0.000  0.477  0.947
-Emotion[T.Neutral]                           0.717    0.120  5.985 0.000  0.482  0.952
-Severity[T.Severe]                           0.033    0.120  0.272 0.786 -0.202  0.268
-Age[T.18]                                   -2.065    1.197 -1.725 0.085 -4.411  0.281
-Age[T.19]                                   -2.079    1.133 -1.835 0.067 -4.299  0.142
-Age[T.20]                                   -2.316    0.909 -2.548 0.011 -4.098 -0.535
-Age[T.21]                                   -1.661    0.841 -1.975 0.048 -3.310 -0.013
-Age[T.22]                                   -1.925    0.877 -2.196 0.028 -3.644 -0.207
-Age[T.23]                                   -2.641    0.892 -2.961 0.003 -4.389 -0.893
-Age[T.24]                                   -2.501    1.027 -2.435 0.015 -4.514 -0.488
-Age[T.25]                                   -0.751    1.034 -0.726 0.468 -2.776  1.275
-Gender[T.Male]                              -0.164    0.217 -0.752 0.452 -0.590  0.263
-Education[T.High school / secondary school]  0.023    0.350  0.066 0.947 -0.663  0.709
-TechComfort[T.4]                             0.071    0.567  0.125 0.900 -1.041  1.183
-TechComfort[T.5]                             0.323    0.611  0.529 0.597 -0.874  1.521
-Familiarity[T.1]                             0.502    0.619  0.811 0.418 -0.711  1.715
-Familiarity[T.2]                             0.316    0.533  0.593 0.553 -0.729  1.361
-Familiarity[T.3]                             0.073    0.449  0.163 0.870 -0.807  0.954
-Familiarity[T.4]                             0.446    0.453  0.985 0.324 -0.441  1.333
-Familiarity[T.5]                            -0.911    0.569 -1.600 0.110 -2.027  0.205
-BaselineMood[T.Cheerful]                    -0.123    0.396 -0.310 0.756 -0.898  0.653
-BaselineMood[T.Excited]                      0.181    0.488  0.370 0.711 -0.776  1.137
-BaselineMood[T.Neutral]                     -0.127    0.293 -0.432 0.665 -0.700  0.447
-BaselineMood[T.Relaxed]                      0.668    0.449  1.488 0.137 -0.212  1.547
-BaselineMood[T.Tense]                       -0.159    0.348 -0.458 0.647 -0.841  0.522
-Emotion[T.Happy]:Severity[T.Severe]         -0.027    0.170 -0.160 0.873 -0.359  0.305
-Emotion[T.Neutral]:Severity[T.Severe]        0.071    0.170  0.417 0.677 -0.262  0.403
-Group Var                                    0.292    0.187                           
-======================================================================================
+
+Post-hoc: Emotion (Credibility)
+         A               B         T        p_corr
+0  Neutral           Happy  0.696207  1.000000e+00
+1  Neutral  ExtremelyHappy  7.133691  1.937352e-08
+2    Happy  ExtremelyHappy  6.761857  6.899633e-08
+
+
+                            Mixed Linear Model Regression Results
+=============================================================================================
+Model:                        MixedLM             Dependent Variable:             Credibility
+No. Observations:             276                 Method:                         REML       
+No. Groups:                   46                  Scale:                          0.3313     
+Min. group size:              6                   Log-Likelihood:                 -277.3966  
+Max. group size:              6                   Converged:                      Yes        
+Mean group size:              6.0                                                            
+---------------------------------------------------------------------------------------------
+                                                   Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+---------------------------------------------------------------------------------------------
+Intercept                                           5.425    1.186  4.576 0.000  3.102  7.749
+Emotion[T.Happy]                                    0.111    0.176  0.634 0.526 -0.233  0.456
+Emotion[T.ExtremelyHappy]                          -0.768    0.176 -4.373 0.000 -1.113 -0.424
+Severity[T.Severe]                                  0.103    0.120  0.860 0.390 -0.132  0.338
+BaselineMood[T.Cheerful]                           -0.057    0.438 -0.131 0.896 -0.916  0.801
+BaselineMood[T.Excited]                             0.489    0.532  0.919 0.358 -0.554  1.532
+BaselineMood[T.Neutral]                            -0.082    0.318 -0.257 0.797 -0.706  0.542
+BaselineMood[T.Relaxed]                             0.404    0.481  0.840 0.401 -0.538  1.347
+BaselineMood[T.Tense]                              -0.073    0.384 -0.191 0.849 -0.825  0.679
+Age[T.18]                                          -2.065    1.197 -1.725 0.085 -4.411  0.281
+Age[T.19]                                          -2.079    1.133 -1.835 0.067 -4.299  0.142
+Age[T.20]                                          -2.316    0.909 -2.548 0.011 -4.098 -0.535
+Age[T.21]                                          -1.661    0.841 -1.975 0.048 -3.310 -0.013
+Age[T.22]                                          -1.925    0.877 -2.196 0.028 -3.644 -0.207
+Age[T.23]                                          -2.641    0.892 -2.961 0.003 -4.389 -0.893
+Age[T.24]                                          -2.501    1.027 -2.435 0.015 -4.514 -0.488
+Age[T.25]                                          -0.751    1.034 -0.726 0.468 -2.776  1.275
+Gender[T.Male]                                     -0.164    0.217 -0.752 0.452 -0.590  0.263
+Education[T.High school / secondary school]         0.023    0.350  0.066 0.947 -0.663  0.709
+TechComfort[T.4]                                    0.071    0.567  0.125 0.900 -1.041  1.183
+TechComfort[T.5]                                    0.323    0.611  0.529 0.597 -0.874  1.521
+Familiarity[T.1]                                    0.502    0.619  0.811 0.418 -0.711  1.715
+Familiarity[T.2]                                    0.316    0.533  0.593 0.553 -0.729  1.361
+Familiarity[T.3]                                    0.073    0.449  0.163 0.870 -0.807  0.954
+Familiarity[T.4]                                    0.446    0.453  0.985 0.324 -0.441  1.333
+Familiarity[T.5]                                   -0.911    0.569 -1.600 0.110 -2.027  0.205
+Emotion[T.Happy]:Severity[T.Severe]                -0.098    0.170 -0.576 0.564 -0.430  0.235
+Emotion[T.ExtremelyHappy]:Severity[T.Severe]       -0.071    0.170 -0.416 0.677 -0.403  0.262
+Emotion[T.Happy]:BaselineMood[T.Cheerful]          -0.094    0.326 -0.287 0.774 -0.733  0.546
+Emotion[T.ExtremelyHappy]:BaselineMood[T.Cheerful] -0.103    0.326 -0.315 0.753 -0.742  0.537
+Emotion[T.Happy]:BaselineMood[T.Excited]           -0.562    0.366 -1.536 0.125 -1.280  0.155
+Emotion[T.ExtremelyHappy]:BaselineMood[T.Excited]  -0.363    0.366 -0.992 0.321 -1.081  0.355
+Emotion[T.Happy]:BaselineMood[T.Neutral]           -0.179    0.218 -0.821 0.412 -0.605  0.248
+Emotion[T.ExtremelyHappy]:BaselineMood[T.Neutral]   0.045    0.218  0.205 0.837 -0.382  0.471
+Emotion[T.Happy]:BaselineMood[T.Relaxed]            0.187    0.300  0.625 0.532 -0.400  0.775
+Emotion[T.ExtremelyHappy]:BaselineMood[T.Relaxed]   0.604    0.300  2.013 0.044  0.016  1.191
+Emotion[T.Happy]:BaselineMood[T.Tense]             -0.292    0.281 -1.039 0.299 -0.842  0.259
+Emotion[T.ExtremelyHappy]:BaselineMood[T.Tense]     0.033    0.281  0.117 0.907 -0.518  0.583
+Group Var                                           0.292    0.187                           
+=============================================================================================
 
