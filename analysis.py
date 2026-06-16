@@ -2,20 +2,20 @@
 
 """
 Analysis script for my thesis experiment survey.
-Runs Cronbach's alpha, Repeated Measures ANOVA, and mixed models
-for perceived social appropriateness and perceived credibility.
+Runs Cronbach's alpha, Repeated Measures ANOVA, post-hoc pairwise comparisons,
+and mixed models for perceived social appropriateness and perceived credibility.
 """
 
 
 # loading the data and libraries
 
 import sys
-import pingouin as pg
 import pandas as pd
+import pingouin as pg
 import statsmodels.formula.api as smf
 import columns as clms
 
-file_path = "data/survey_data.xlsx"
+file_path = "/Users/maddyxbles/Desktop/final_data_experiment 2.xlsx"
 df = pd.read_excel(file_path, header=1)
 
 # keep only the real responses
@@ -41,7 +41,7 @@ df = df.dropna(how="all")
 
 
 # redirect all output to a .txt file instead of console
-output_path = "results/analysis_results.txt"
+output_path = "/Users/maddyxbles/Desktop/RESULTS_ANALYSIS_EXPERIMENT.txt"
 original_stdout = sys.stdout
 
 with open(output_path, "w") as f:
@@ -118,8 +118,7 @@ with open(output_path, "w") as f:
         ("ExHappy_NS_Appropriateness","ExtremelyHappy","NonSevere"),
         ("Neutral_S_Appropriateness","Neutral","Severe"),
         ("Happy_S_Appropriateness","Happy","Severe"),
-        ("ExHappy_S_Appropriateness","ExtremelyHappy","Severe")
-    ]
+        ("ExHappy_S_Appropriateness","ExtremelyHappy","Severe")]
 
     for score, emotion, severity in conditions_app:
 
@@ -139,6 +138,11 @@ with open(output_path, "w") as f:
             "BaselineMood": df["Baseline Mood"]})
 
         long_df_app = pd.concat([long_df_app, temp], ignore_index=True)
+    
+    # neutral as intercept in mixed model
+    long_df_app["Emotion"] = pd.Categorical(
+    long_df_app["Emotion"],
+    categories=["Neutral", "Happy", "ExtremelyHappy"])
 
     
     # Repeated Measures Anova
@@ -152,16 +156,29 @@ with open(output_path, "w") as f:
         detailed=True)
 
     print(anova_app[["Source", "ddof1", "ddof2", "F", "p_GG_corr","ng2"]])
+    
+    
+    # Post-hoc Pairwise Comparisons (Emotion only)
+        
+    posthoc_emotion = pg.pairwise_tests(
+        dv="Appropriateness",
+        within="Emotion",
+        subject="Participant",
+        data=long_df_app,
+        padjust="bonf")
+
+    print("\nPOSTHOC: EMOTION (Appropriateness)")
+    print(posthoc_emotion[["A", "B", "T", "p_corr"]])
 
     
     # Mixed Model
 
     model_app = smf.mixedlm(
-        "Appropriateness ~ Emotion * Severity + Age + Gender + Education + TechComfort + Familiarity + BaselineMood",
+        "Appropriateness ~ Emotion * Severity + Emotion * BaselineMood + Age + Gender + Education + TechComfort + Familiarity",
         data=long_df_app,
-        groups=long_df_app["Participant"]
-    )
-
+        groups=long_df_app["Participant"])
+    
+    print ("\n")
     print(model_app.fit().summary())
 
 
@@ -212,6 +229,12 @@ with open(output_path, "w") as f:
             "BaselineMood": df["Baseline Mood"]})
 
         long_df_cred = pd.concat([long_df_cred, temp], ignore_index=True)
+    
+    
+    # neutral as intercept in mixed model
+    long_df_cred["Emotion"] = pd.Categorical(
+    long_df_cred["Emotion"],
+    categories=["Neutral", "Happy", "ExtremelyHappy"])
 
     
     # Repeated Measures ANOVA
@@ -225,19 +248,36 @@ with open(output_path, "w") as f:
         detailed=True)
 
     print(anova_cred[["Source", "ddof1", "ddof2", "F", "p_GG_corr","ng2"]])
+    
+    
+    # Post-hoc Pairwise Comparisons (Emotion only)
+    
+    posthoc_emotion = pg.pairwise_tests(
+        dv="Credibility",
+        within="Emotion",
+        subject="Participant",
+        data=long_df_cred,
+        padjust="bonf")
+
+    print("\nPOSTHOC: EMOTION (Credibility)")
+    print(posthoc_emotion[["A", "B", "T", "p_corr"]])
 
     
     # Mixed Model
 
     model_cred = smf.mixedlm(
 
-        "Credibility ~ Emotion * Severity + Age + Gender + Education + TechComfort + Familiarity + BaselineMood",
+        "Credibility ~ Emotion * Severity + Emotion * BaselineMood + Age + Gender + Education + TechComfort + Familiarity",
         data=long_df_cred,
-        groups=long_df_cred["Participant"]
-    )
+        groups=long_df_cred["Participant"])
+    print ("\n")
     print(model_cred.fit().summary())
 
 
 # Without this I wil get 'I/O operation on closed file' error
 sys.stdout = original_stdout
 print(f"Results saved to: {output_path}")
+
+
+
+
